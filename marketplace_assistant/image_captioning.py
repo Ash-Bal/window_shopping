@@ -14,7 +14,8 @@ from marketplace_assistant.config import RAW_IMAGE_FILE_DIR, PROCESSED_DATA_DIR
 def main():
     model_id = "vikhyatk/moondream2"
     if torch.cuda.is_available():
-        model = AutoModelForCausalLM.from_pretrained(model_id, trust_remote_code=True).to("mps")
+        device = torch.device("cuda")
+        model = AutoModelForCausalLM.from_pretrained(model_id, trust_remote_code=True).to(device)
     elif torch.backends.mps.is_available():
         model = AutoModelForCausalLM.from_pretrained(model_id, trust_remote_code=True).to("mps")
     else:
