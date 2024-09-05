@@ -21,7 +21,7 @@ EXTERNAL_DATA_DIR = DATA_DIR / "external"
 GOOG_ROOT = Path("/content/drive/MyDrive/")
 GOOG_RAW_DATA = GOOG_ROOT / "marketplace_data"
 GOOG_RAW_IMAGE_FILE_DIR = GOOG_RAW_DATA / "raw" / "abo-images-small" / "images" / "small"
-GOOG_PROCESSED_DATA_DIR = GOOG_ROOT / "processed"
+GOOG_PROCESSED_DATA_DIR = GOOG_RAW_DATA / "processed"
 
 MODELS_DIR = PROJ_ROOT / "models"
 
